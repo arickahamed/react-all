@@ -4,6 +4,16 @@ import React from "react";
 //   return <h1>Hello Ali</h1>;
 // }
 
-const Greet = () => <h1>Hello Ali</h1>;
+const Greet = (props) => {
+  console.log(props);
+  return (
+    <div>
+      <h1>
+        {props.name} is likes to play {props.play}
+      </h1>
+      {props.children}
+    </div>
+  );
+};
 
 export default Greet;
